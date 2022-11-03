@@ -19,12 +19,23 @@ _An API where you can access the dogs and cats in an animal shelter. The animals
 
 ## Documentation
 
-* _Authentication Token: Before making your first request, you must get a token for authentication. In Postman or another API caller, type in: localhost:5004/api/Users/authenticate as Post request with the following code in the body: {"Name": "[YOUR USERNAME HERE]", "Password": "[YOUR PASSWORD]"} This will return a token to use to make your requests._
+* _(Further Exploration) Authentication Token Using JWT: Before making your first request, you must get a token for authentication. In Postman or another API caller, type in: localhost:5004/api/Users/authenticate as Post request with the following code in the body: {"Name": "[YOUR USERNAME HERE]", "Password": "[YOUR PASSWORD]"} This will return a token to use to make your requests._
 * _Making your requests: To make a request, first find the HTTP method and the path for the operation that you want to use. 
 
 The GET request: localhost:5004/api/animals if you would like to specify you can search by species, name, or minumumAge as well by adding ?[query]=[search param] to the GET request. You can also get animals by id the request is localhost:5004/api/animals/[id]
 
-The other requests you can make are POST, PUT, and DELETE_
+The POST request: localhost:5004/api/animals if you would like to add a new business. The JSON format is this:
+{
+  "name": "{ANIMAL NAME}",
+  "species"; "{ANIMAL SPECIES}",
+  "age": {ANIMAL AGE}
+}
+
+The PUT request: 
+Edit an animal: localhost:5004/api/animals/{id}
+
+The DELETE request: 
+Delete an animal: localhost:5004/api/animals/{id}_
 
 ## Setup/Installation Requirements
 
